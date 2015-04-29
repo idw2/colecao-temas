@@ -1,0 +1,63 @@
+/* 2AAFC3 * 208897 */
+
+.color-bg{
+	background-color:#2AAFC3;
+}
+.dark-bg a {
+	color: #2AAFC3;
+	/*text-decoration: underline;*/
+}
+.section.section-pricing .panel-primary .panel-heading{
+	background-color: #2AAFC3;
+}
+.thumbnail-badges img {
+	border: 5px solid #2AAFC3;
+}
+.btn-king {
+	background: #2AAFC3;
+}
+.btn-king:hover,
+.btn-king:focus,
+.btn-king:active {
+	background-color: #208897;
+}
+.btn-king.white:hover,
+.btn-king.white:focus,
+.btn-king.white:active {
+	color:#2AAFC3;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+	background-color: #2AAFC3;
+}
+.work-info{
+	color: #2AAFC3;
+}
+.hover-mask2 {
+	background: #2AAFC3;
+}
+#filter-works ul li a:hover{
+	background:#208897;
+}
+#filter-works ul li.active a{
+	background:#2AAFC3;
+}
+.modal-header{
+	background:#2AAFC3;
+}
+#contact-form .form-control:focus, 
+.input-group .form-control:focus {
+	border:2px solid #2AAFC3;
+}
+
+.social-profiles li a {
+	border:2px solid #2AAFC3;
+	color:#2AAFC3;
+
+}
+.social-profiles li a:hover {
+	background:#2AAFC3;
+}
+
+.social-links li a:hover {
+	color:#2AAFC3;
+}

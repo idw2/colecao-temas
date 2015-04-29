@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="br">
+  
+<!-- Mirrored from staging.designlab.com.br/inase/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Apr 2015 20:28:53 GMT -->
+<head>
+    <script type="text/javascript">
+      window.APP || (APP = {});
+      APP.info = {
+        application_id: "ID DO APLICATIVO",
+        user_id: "ID DO USUÁRIO",
+        session_token: "TOKEN DA SESSÃO",
+      };
+      APP.paths = {
+        templates: /*URI DO SITE*/ 'js/views/templates/'
+      };
+    </script>
+    <meta charset="utf-8">
+    <title>INASE // v1.0a</title>
+    <meta name="description" content="">
+    <link href='images/favicon.png' rel='shortcut icon' type='image/png'>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="js/build.js"></script>
+
+  </head>
+  <body class="page-">
+
+    
+      <nav class="ui-navbar uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center">
+
+          <a class="uk-navbar-brand uk-hidden-small" href="index.html">
+            <img class="uk-margin uk-margin-remove" src="images/logo_inase-bw.png" width="153" height="40" title="INASE" alt="INASE">
+          </a>
+
+          <div class="uk-navbar-flip uk-hidden-small">
+            <ul class="uk-navbar-nav">
+              <li><a href="index.html">Cursos</a></li>
+              <li><a href="#">Produtos</a></li>
+              <li><a href="#">Instituições</a></li>
+            </ul>
+            <ul class="uk-navbar-nav uk-navbar-user">
+              <li><a href="entrar.html">Entrar</a></li>
+              <li><a href="#" class="uk-button uk-button-green uk-button-rounded">Cadastre-se</a></li>
+            </ul>
+          </div>
+
+          <!--NAVBAR MOBILE-->
+
+          <div class="uk-visible-small">
+            <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas=""></a>
+
+            <ul class="uk-navbar-flip uk-navbar-nav">
+              <li>
+                <a href="#" class="ui-navbar-search-mobile">
+                  <i class="uk-icon-search"></i>
+                </a>
+              </li>
+            </ul>
+
+            <a href='index.html' class="uk-navbar-brand uk-navbar-center">
+              <img src="images/logo_inase-bw.png" width="90" height="30" title="UIkit" alt="UIkit">
+            </a>
+          </div>
+
+          <div class='ui-navbar-search-panel uk-panel uk-panel-box'>
+            <form action='#' method='get' class='uk-form'>
+              <div class='uk-grid uk-grid-small'>
+                <div class='uk-width-2-3'>
+                  <input class='uk-width-1-1' type='search' placeholder="Buscar" name='s'>
+                </div>
+                <div class='uk-width-1-3'>
+                  <a href='#cancel' class='uk-width-1-1 uk-button'>Cancelar</a>
+                </div>
+            </form>
+          </div>
+
+          <!--/NAVBAR MOBILE-->
+
+        </div>
+      </nav>
+
+    <div class="ui-hero ui-hero-dark" data-uk-grid-margin>
+  <div class="ui-hero-background" style="background-image: url(images/hero-bg.jpg)"></div>
+  <div class="uk-container uk-container-center">
+    <div class="uk-grid">
+      <div class="uk-width-medium-1-1" style="z-index: 10;">
+
+        <div class="uk-vertical-align">
+          <div class="uk-vertical-align-middle">
+            <h1 class="uk-heading-large uk-hidden-small">Lorem Ipsum Dolor</h1>
+            <p class="uk-text-large uk-hidden-small">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+
+            <!--TEXTO MOBILE-->
+            <p class="uk-text-large uk-visible-small">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+            <!--/TEXTO MOBILE-->
+
+            <p>
+              <a class="uk-button uk-button-secondary uk-button-large" href="#">Comece a aprender</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-container-center uk-margin-top">
+
+  <div class="uk-grid" data-uk-grid-margin>
+    <div class="uk-width-medium-1-2">
+      <div class="uk-button-dropdown ui-dropdown-title" data-uk-dropdown="{mode:'click'}">
+        <button class="uk-button">Cursos Populares <i class="uk-icon-caret-down"></i></button>
+        <div class="uk-dropdown">
+          <ul class="uk-nav uk-nav-dropdown">
+            <li class="uk-nav-header">Cursos</li>
+            <li class="uk-active"><a class="uk-link-muted">Populares</a></li>
+            <li><a href="#">Novos</a></li>
+            <li><a href="#">Selecionados</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="uk-width-medium-1-2 uk-hidden-small">
+      <div class="uk-float-right">
+        <form class="uk-search ui-search" data-uk-search="{source:'js/tests/_searchautocomplete.json'}">
+          <input class="uk-search-field" type="search" placeholder="Pesquisar curso" autocomplete="off">
+          <script type="text/autocomplete">
+            <ul class="uk-nav uk-nav-autocomplete uk-autocomplete-results">
+            {{~items}}
+            <li data-value="{{ $item.title }}">
+            <a>
+            {{ $item.title }}
+            </a>
+            </li>
+            {{/items}}
+            </ul>
+          </script>
+          <div class="uk-dropdown uk-dropdown-search" aria-expanded="false"></div></form>
+      </div>
+    </div>
+  </div>
+  <div class="uk-grid" data-uk-grid-margin>
+
+          <div class="uk-width-medium-1-3">
+        <figure class="uk-thumbnail thumbnail-lg">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-3">
+        <figure class="uk-thumbnail thumbnail-lg">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-3">
+        <figure class="uk-thumbnail thumbnail-lg">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+    
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+    
+  </div>
+
+  <hr class="uk-grid-divider">
+
+  <h2 class="uk-text-center">Novos Cursos</h2>
+  <div class="uk-grid" data-uk-grid-margin>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+          <div class="uk-width-medium-1-4">
+        <figure class="uk-thumbnail">
+          <div class="thumbnail-img">
+            <a href="curso.html"><img src="images/thumbnail.jpg" alt=""></a>
+            <a href="js/tests/_postThumbnail.json" class="thumbnail-budget" 
+               data-uk-lightbox 
+               data-object='{"id": "123123"}'
+               data-template='popupThumbnail'
+               data-lightbox-type="template" >
+              <i class="uk-icon-play"></i>
+            </a>
+          </div>
+          <figcaption class="uk-thumbnail-caption">
+            <h3 class="thumbnail-title"><a href="curso.html">Medicina do Esporte e da Atividade Física</a></h3>
+            <div class="thumbnail-footer">
+              <span><i class="uk-icon-calendar-o"></i> 4 meses</span>
+              <span class="uk-float-right"><i class="uk-icon-clock-o"></i> 200 horas</span>
+            </div>
+          </figcaption>
+        </figure>  
+      </div>
+    
+  </div>
+
+  <hr class="uk-grid-divider">
+
+  <h2 class="uk-text-center">Instituições Parceiras</h2>
+
+  <div class="uk-grid" data-uk-grid-margin>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+    <div class="uk-width-1-2 uk-width-medium-1-3 uk-width-large-1-6">
+      <figure class="uk-overlay uk-overlay-hover">
+        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+        <figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <div>Instituição</div>
+        </figcaption>
+        <a class="uk-position-cover" href="#"></a>
+      </figure>
+    </div>
+  </div>
+</div>
+<!--FOOTER-->
+
+<!--
+<div class="uk-grid" data-uk-grid-margin>
+  <div class="uk-width-1">
+<!--NEWSLETTER-- >
+</div>
+</div>
+-->
+
+<footer class="footer">
+  <div class="footer-body">
+    <div class="uk-container uk-container-center">
+      <h2 class="uk-text-center uk-heading">Sed ut perspiciatis unde omnis iste natus <a href="#" class="uk-button uk-button-large uk-button-green uk-button-rounded">Cadastre-se</a></h2>
+      <div class="uk-grid">
+        <div class="uk-width-6-10">
+          <ul class="uk-subnav">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Instituições</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="uk-width-4-10">
+          <ul class="uk-subnav uk-float-right">
+            <li><a href="#">Termos</a></li>
+            <li><a href="#">Privacidade</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="uk-container uk-container-center">
+      <div class="uk-grid ">
+        <div class="uk-width-1-2">
+          <img src="images/logo_inase-bw.png" width="100">
+          <span class="copy">&copy; INASE. Todos os direitos reservados</span>
+        </div>
+        <div class="uk-width-1-2">
+          <div class="uk-float-right ui-social">
+            <span>Siga-nos: </span>
+            <ul class="uk-subnav uk-float-right">
+              <li><a href="#"><i class="uk-icon-facebook"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--/FOOTER-->
+
+<!--///////////-->
+
+
+<div id="offcanvas" class="uk-offcanvas"></div>
+
+</body>
+
+<!-- Mirrored from staging.designlab.com.br/inase/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Apr 2015 20:29:08 GMT -->
+</html>
